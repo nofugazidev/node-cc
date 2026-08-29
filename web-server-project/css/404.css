@@ -1,0 +1,197 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202020;
+  background: #f7f7f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar {
+  height: 80px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+  color: #d97920;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  font-size: 14px;
+  color: #555;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #d97920;
+}
+
+/* =========================
+ERROR PAGE
+========================= */
+
+.error-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+}
+
+.error-content {
+  max-width: 900px;
+}
+
+.error-number {
+  color: #d97920;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.error-content h1 {
+  font-size: clamp(50px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+}
+
+.error-text {
+  max-width: 500px;
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+ACTIONS
+========================= */
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 28px;
+  background: #d97920;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #b96112;
+  transform: translateY(-2px);
+}
+
+.text-link {
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: 1px solid #202020;
+  padding-bottom: 5px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+  padding: 45px 8%;
+  background: #151515;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 6%;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .error-page {
+    padding: 80px 7%;
+  }
+
+  .error-content h1 {
+    letter-spacing: -2px;
+  }
+
+  .error-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
