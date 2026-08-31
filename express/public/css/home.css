@@ -1,0 +1,414 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #f7f7f5;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d97920;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #555;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d97920;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    background-image: url("../images/image1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    max-width: 850px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    max-width: 500px;
+    font-size: 17px;
+    color: #eeeeee;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #d97920;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #b96112;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.intro,
+.services {
+    padding: 120px 8%;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 70px;
+}
+
+.section-label span {
+    color: #d97920;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-label p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.intro h2 {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.intro h2 span {
+    color: #d97920;
+}
+
+.intro-content > div {
+    max-width: 500px;
+}
+
+.intro-content p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.text-link {
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #202020;
+    padding-bottom: 5px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.services-grid article {
+    padding: 30px 40px;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.services-grid article:first-child {
+    padding-left: 0;
+}
+
+.services-grid article:last-child {
+    border-right: none;
+}
+
+.services-grid span {
+    font-size: 12px;
+    color: #d97920;
+}
+
+.services-grid h3 {
+    font-size: 25px;
+    margin: 30px 0 15px;
+}
+
+.services-grid p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 120px 8%;
+    background: #202020;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta h2 {
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.btn-light {
+    background: white;
+    color: #202020;
+}
+
+.btn-light:hover {
+    background: #d97920;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 8%;
+    background: #151515;
+    color: #999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.copyright {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #202020;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+        gap: 0;
+
+        z-index: 10;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 18px 6%;
+        border-top: 1px solid #eee;
+    }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .intro,
+    .services,
+    .cta {
+        padding: 80px 7%;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid article,
+    .services-grid article:first-child {
+        padding: 30px 0;
+        border-right: none;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
