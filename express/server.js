@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const { logger } = require("./middleware/logEvent");
+const errorHandler  =  require("./middleware/errorHandler")
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -18,10 +19,10 @@ const corsOptions = {
     if (!origin || whitelist.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Request Blocked by CORS!!!"))
+      callback(new Error("Request Blocked by CORS!!!"));
     }
   },
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
@@ -53,6 +54,8 @@ app.get(["/old-page", "/old-page{.html}"], (req, res) => {
 app.get("/*catchall", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
