@@ -2,3 +2,4 @@
 20260908	20:22:21	13105fed-cf69-4129-83e1-86c10ff0a6c5	next: undefined
 20260908	20:25:41	a90555d4-2d24-45cf-828d-e2a9a46900b3	Error: Request Blocked by CORS!!!
 20260908	20:25:41	a6a14d8d-ab11-441d-8b12-b5aaa24bebbb	Error: Request Blocked by CORS!!!
+20260908	21:12:52	01f00854-4ea8-4954-9f18-ebd4a9d0cd0a	Error: ENOENT: no such file or directory, stat 'C:\Users\Mubarak\Desktop\node-bs\express\routes\views\index.html'
