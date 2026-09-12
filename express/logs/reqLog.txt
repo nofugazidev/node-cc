@@ -279,3 +279,7 @@
 20260909	05:32:43	626aa58a-d10a-45b3-8b10-3c14fa39d270	GET	undefined	/js/script.js
 20260909	05:32:43	bd4e3170-a570-4b47-aaea-05d0629fa0c5	GET	undefined	/images/image1.jpg
 20260909	20:57:20	6bd4a0d0-c51e-43c6-b46c-a50e8eaed336	GET	undefined	/employee
+20260910	05:07:41	2d91ab08-86f8-42db-a8a4-0b708c89a2aa	GET	undefined	/employee
+20260912	10:18:20	1b2a3d51-364d-4211-a5b5-e11ab75560fd	GET	undefined	/employee
+20260912	10:19:28	9d0dc76b-24f2-4f0d-b63d-79a9d542bcd4	POST	undefined	/employee
+20260912	10:19:37	f5192d56-0fc8-4d15-aca4-7c1d8ab3d829	POST	undefined	/employee
