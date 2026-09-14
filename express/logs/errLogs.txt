@@ -4,3 +4,15 @@
 20260908	20:25:41	a6a14d8d-ab11-441d-8b12-b5aaa24bebbb	Error: Request Blocked by CORS!!!
 20260908	21:12:52	01f00854-4ea8-4954-9f18-ebd4a9d0cd0a	Error: ENOENT: no such file or directory, stat 'C:\Users\Mubarak\Desktop\node-bs\express\routes\views\index.html'
 20260912	10:19:28	106dc389-4e73-46b0-9b0d-a5bc087279c1	SyntaxError: Unexpected token '"', ""{\n  \"fi"... is not valid JSON
+20260913	08:24:35	fb462f99-c95c-40ce-9af6-5dc2d1fb4360	ReferenceError: employee is not defined
+20260913	08:24:54	68abed3a-8dcb-4c1b-a2fa-b9c73043dab3	ReferenceError: employee is not defined
+20260913	08:26:03	dccbd564-82c1-46d3-a588-409380f0e0c3	ReferenceError: employee is not defined
+20260913	08:26:04	3fd01175-7d1f-4d36-b484-f2a2c6586634	ReferenceError: employee is not defined
+20260913	08:26:04	a680a0d0-90a0-4f0e-aab4-06281fce4bd1	ReferenceError: employee is not defined
+20260913	08:26:04	39b68680-088f-4def-a379-3196d6b11c62	ReferenceError: employee is not defined
+20260913	08:26:05	b672ccd2-c3ae-4df9-86f5-acae946d467a	ReferenceError: employee is not defined
+20260913	08:26:05	b538da89-5d8c-415d-8348-31341f0cedcd	ReferenceError: employee is not defined
+20260913	08:26:05	fd71593d-fcef-4feb-930e-0ca1d0cfd924	ReferenceError: employee is not defined
+20260913	08:26:05	971d4af4-babd-4a33-8a30-6ca51dcac940	ReferenceError: employee is not defined
+20260913	08:27:46	0a1d3f7a-763c-4186-aaab-811f67e41409	ReferenceError: employee is not defined
+20260914	10:21:04	62e9a130-b3bd-4fd9-a9b0-d3879df5061b	SyntaxError: Unexpected token '"', ""{\n\"id\": 1,\n}"" is not valid JSON
