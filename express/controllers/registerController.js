@@ -16,6 +16,7 @@ const handleNewUser = async (req, res) => {
       message: "username and password required",
     });
   }
+  
   const duplicate = usersDB.users.find((person) => {
     return (person.username === user);
   });

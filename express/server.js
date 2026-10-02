@@ -39,6 +39,7 @@ app.use("/", require("./routes/root"));
 app.use("/subdir", require("./routes/subdir"));
 app.use('/employee', require('./routes/apis/employees'))
 app.use('/register', require('./routes/apis/register'))
+app.use('/login', require('./routes/apis/login'))
 
 // app.all("/*catchall", (req, res) => {
 //   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
