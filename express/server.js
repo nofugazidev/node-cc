@@ -4,28 +4,30 @@ const { logger } = require("./middleware/logEvent");
 const errorHandler = require("./middleware/errorHandler");
 const {verifyJWT} = require('./middleware/verifyJWT')
 const cors = require("cors");
-const cookieParser = require('cookie-parser')
+const corsOptions = require('./config/corsOptions')
+const cookieParser = require('cookie-parser');
+const credentials = require("./middleware/credentials");
 const app = express();
 const PORT = process.env.PORT || 3500;
 
 app.use(logger);
+app.use(credentials)
+// const whitelist = [
+//   "https://www.google.com",
+//   "http://127.0.0.1:5500/",
+//   "http://localhost:3500/",
+// ];
 
-const whitelist = [
-  "https://www.google.com",
-  "http://127.0.0.1:5500/",
-  "http://localhost:3500/",
-];
-
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (!origin || whitelist.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Request Blocked by CORS!!!"));
-    }
-  },
-  optionsSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (!origin || whitelist.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Request Blocked by CORS!!!"));
+//     }
+//   },
+//   optionsSuccessStatus: 200,
+// };
 
 app.use(cors(corsOptions));
 
