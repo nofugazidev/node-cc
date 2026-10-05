@@ -452,3 +452,6 @@
 20261005	11:50:24	412950d2-aa57-42b1-a9cc-af93cb6a681e	POST	undefined	/login
 20261005	11:50:29	ad06f321-00e6-416f-96f1-ce5f4c0354ad	GET	undefined	/refresh
 20261005	11:50:32	e2aee1e7-e78b-4dde-abc8-1906cf8d4af0	GET	undefined	/refresh
+20261005	12:31:01	ba1535c0-80ea-4167-92ac-8468a262bf06	POST	undefined	/login
+20261005	12:31:09	c346c8f2-8e16-4aca-8cf8-6a23a9cb7f0d	GET	undefined	/logout
+20261005	12:35:13	c7cb758e-da63-4c44-982e-1c7bbc1f0e2e	GET	undefined	/refresh

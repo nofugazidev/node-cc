@@ -45,6 +45,7 @@ app.use("/subdir", require("./routes/subdir"));
 app.use('/register', require('./routes/apis/register'))
 app.use('/login', require('./routes/apis/login'))
 app.use('/refresh', require('./routes/apis/refresh'))
+app.use('/logout', require('./routes/apis/logout'))
 
 app.use(verifyJWT);
 app.use('/employee', require('./routes/apis/employees'))
