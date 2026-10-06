@@ -16,9 +16,9 @@ const handleNewUser = async (req, res) => {
       message: "username and password required",
     });
   }
-  
+
   const duplicate = usersDB.users.find((person) => {
-    return (person.username === user);
+    return person.username === user;
   });
 
   if (duplicate) {
@@ -27,7 +27,11 @@ const handleNewUser = async (req, res) => {
 
   try {
     const hashedPassword = await bcrypt.hash(pwd, 10);
-    const newUser = { username: user, password: hashedPassword };
+    const newUser = {
+      "username": user,
+      "roles": { User: 2001 },
+      "password": hashedPassword,
+    };
     usersDB.setUser([...usersDB.users, newUser]);
 
     await fsPromises.writeFile(
@@ -46,4 +50,4 @@ const handleNewUser = async (req, res) => {
   }
 };
 
-module.exports = { handleNewUser }
+module.exports = { handleNewUser };

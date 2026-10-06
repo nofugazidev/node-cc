@@ -34,3 +34,4 @@
 20261002	21:27:38	acd4a680-2ac8-424b-963b-33c691fee341	SyntaxError: Unexpected token '"', ""eyJhbGciO"... is not valid JSON
 20261002	21:28:40	be8eb90f-8227-4a66-916a-2124e91e1835	SyntaxError: Unexpected token '"', ""eyJhbGciO"... is not valid JSON
 20261002	21:28:44	21fef8ae-d568-4273-93ad-adc41e2eed5c	SyntaxError: Unexpected token '"', ""eyJhbGciO"... is not valid JSON
+20261006	21:19:22	10b5adb9-36af-453a-a406-eae90246c7ea	ReferenceError: sendStatus is not defined
