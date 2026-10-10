@@ -477,3 +477,6 @@
 20261006	21:20:58	cce422eb-f49e-4ec7-b7f0-78b7509af46e	POST	undefined	/employee/
 20261006	21:21:00	d379342f-9a8b-4be1-9791-9ce124a0dee7	POST	undefined	/employee/
 20261006	21:21:05	613d144c-1afd-4944-a812-c95591a09979	GET	undefined	/employee/
+20261006	21:23:04	e6495f0e-3f57-4240-8fd9-44e04df9ee4b	POST	undefined	/login
+20261006	21:23:14	228276e9-be1c-4c20-9f2a-5a4216db5759	GET	undefined	/employee/
+20261006	21:23:17	4352e213-4e2f-401d-a5bf-17bbee5f4799	POST	undefined	/employee/
