@@ -9,13 +9,13 @@ const corsOptions = require("./config/corsOptions");
 const cookieParser = require("cookie-parser");
 const credentials = require("./middleware/credentials");
 const mongoose = require("mongoose");
-const connectDb = require("./config/dbConnection");
+const connectDB = require("./config/dbConnect");
+
 const app = express();
 const PORT = process.env.PORT || 3500;
 
 //connect to mongodb
-connectDb();
-
+connectDB();
 app.use(logger);
 app.use(credentials);
 // const whitelist = [
@@ -70,7 +70,7 @@ app.get("/*catchall", (req, res) => {
 app.use(errorHandler);
 
 mongoose.connection.once("open", () => {
-  console.log("connected to database....");
+  console.log("database connection successful...");
   app.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`);
   });

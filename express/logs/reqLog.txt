@@ -480,3 +480,11 @@
 20261006	21:23:04	e6495f0e-3f57-4240-8fd9-44e04df9ee4b	POST	undefined	/login
 20261006	21:23:14	228276e9-be1c-4c20-9f2a-5a4216db5759	GET	undefined	/employee/
 20261006	21:23:17	4352e213-4e2f-401d-a5bf-17bbee5f4799	POST	undefined	/employee/
+20261011	00:45:08	a271eb60-2ae5-4504-b442-2c9fb27a6bc3	POST	undefined	/register
+20261011	00:45:19	d3f976e0-2975-4074-b880-9746d9f682b3	POST	undefined	/register
+20261011	00:47:49	3fb27fdf-12fb-45d2-9092-6fbdd8e3a8f0	POST	undefined	/register
+20261011	00:48:08	107a9e52-578e-429d-b4e1-83603302736d	POST	undefined	/register
+20261011	00:52:52	f4fe83e4-6179-4815-92da-0a4432da4879	POST	undefined	/register
+20261011	00:52:59	0b821cdc-d705-4ead-a6b5-1c9dd62ace46	POST	undefined	/register
+20261011	01:03:55	1c8fd398-50ff-4580-bf13-7363571c73ef	POST	undefined	/register
+20261011	01:04:03	f530f179-9704-4641-b54f-7a723f0b6d77	POST	undefined	/register
