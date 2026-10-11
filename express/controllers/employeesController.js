@@ -1,86 +1,75 @@
-// const data = {};
-// data.employee = require("../model/employee.json");
+const Employee = require("../model/Employee");
 
-const data = {
-  employees: require("../model/employees.json"),
-  setEmployee: function (data) {
-    this.employees = data;
-  },
+const getAllEmployee = async (req, res) => {
+  const employees = await Employee.find();
+  if (!employees)
+    return res.status(204).json({ message: "employees not found!" });
+  res.json(employees);
 };
 
-const getAllEmployee = (req, res) => {
-  res.json(data.employees);
-};
-
-const createEmployee = (req, res) => {
-  const newEmployee = {
-    id: data.employees[data.employees.length - 1].id + 1 || 1,
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
-  };
-
-  if (!newEmployee.firstname || !newEmployee.lastname) {
+const createEmployee = async (req, res) => {
+  if (!req?.body?.firstname || !req?.body?.lastname)
     return res
       .status(400)
       .json({ message: "firstname and lastname are required!!!" });
-  }
 
-  data.setEmployee([...data.employees, newEmployee]);
-  res.status(201).json(data.employees);
+  try {
+    const result = await Employee.create({
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+    });
+
+    res.status(201).json(result);
+  } catch (err) {
+    console.error(err);
+  }
 };
 
-const updateEmployee = (req, res) => {
-  const employee = data.employees.find(
-    (emp) => emp.id === parseInt(req.body.id),
-  );
+const updateEmployee = async (req, res) => {
+  if (!req.body?.id)
+    return res.status(400).json({ message: "employee ID is required!" });
+
+  const employee = await Employee.findOne({ _id: req.body.id }).exec();
 
   if (!employee) {
     return res
-      .status(400)
-      .json({ message: `Employee with id ${req.body.id} was not found!!!` });
+      .status(204)
+      .json({ message: `Employee ID does not match ${req.body.id}!` });
   }
 
-  if (req.body.firstname) employee.firstname = req.body.firstname;
-  if (req.body.lastname) employee.lastname = req.body.lastname;
+  if (req.body?.firstname) employee.firstname = req.body.firstname;
+  if (req.body?.lastname) employee.lastname = req.body.lastname;
 
-  const filterdArray = data.employees.filter(
-    (emp) => emp.id !== parseInt(req.body.id),
-  );
-  const unsortedArray = [...filterdArray, employee];
-  data.setEmployee(
-    unsortedArray.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0)),
-  );
-  res.status(201).json(data.employees);
+  const result = await employee.save();
+  res.status(201).json(result);
 };
 
-const deleteEmployee = (req, res) => {
-  const employee = data.employees.find(
-    (emp) => emp.id === parseInt(req.body.id),
-  );
+const deleteEmployee = async (req, res) => {
+  if (!req.body?.id)
+    return res.status(400).json({ message: "employee ID is required!" });
+  const employee = await Employee.findOne({ _id: req.body.id }).exec();
+
   if (!employee) {
     return res
-      .status(400)
-      .json({ message: `employee with id ${req.body.id} cannot be found` });
+      .status(204)
+      .json({ message: `Employee ID does not match ${req.body.id}!` });
   }
 
-  const filteredArray = data.employees.filter(
-    (emp) => emp.id !== parseInt(req.body.id),
-  );
-  data.setEmployee([...filteredArray]);
-  res.status(201).json(data.employees);
+  const result = await employee.deleteOne({ _id: req.body.id });
+  res.status(201).json(result);
 };
 
-const getEmployee = (req, res) => {
-  const employee = data.employees.find((emp) => emp.id === parseInt(req.params.id));
-  if(!employee) {
-    return res.status(400).json(
-      {
-        "message": `employee with id of ${req.params.id} cannot be found`
-      }
-    )
-  };
+const getEmployee = async (req, res) => {
+  if (!req?.params?.id)
+    return res.status(400).json({ message: "employee ID is required!" });
+  const employee = await Employee.findOne({ _id: req.params.id }).exec();
+  if (!employee) {
+    return res
+      .status(204)
+      .json({ message: `Employee ID does not match ${req.params.id}!` });
+  }
 
-  res.status(201).json(employee)
+  res.status(201).json(employee);
 };
 
 module.exports = {
